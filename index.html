@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="import" href="bower_components/paper-card/paper-card.html" async>
+    <link rel="import" href="bower_components/paper-button/paper-button.html" async>
+    <title>Minecraft Crafting, Brewing and Command Index</title>
+    <style>
+        #opening {
+            padding: 15px;
+        }
+
+        #heading {
+            text-align: center;
+        }
+        body {
+            margin-bottom: 15px;
+        }
+
+        paper-card {
+            background-color: rgb(248, 248, 248);
+            margin: 2px;
+        }
+        
+        a:hover {
+            text-decoration: none;
+        }
+
+        * {
+            outline: none;
+        }
+
+        a {
+            color: green;
+        }
+    </style>
+  </head>
+  <body>
+    <span class="sr-only"><a class="sr-only" href="#calculator-container">Skip to main content</a></span>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">
+            <!-- Supply a label for the link for screen readers -->
+            <span class="sr-only">Go Home</span>
+            <img src="grassblock.png" width="32" height="32" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="recipes.html">Crafting Recipe Index</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="potions.html">Potion Brewing Recipe Index</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="commands.html">Commands Documentation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="calculator.html">Nether Portal Calculator</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <div class="container" id="heading">
+        <h2>Welcome to THE hub for everything Minecraft!</h2>
+    </div>
+    <div class="container" id="content">
+        <div class="row">
+            <p id="opening">
+                Here you'll find tools that are crucial to anyone who plays Minecraft. We have a crafting recipe reference index, a potion recipe reference index, command documentation, and last but certainly not least, a nether portal calculator.
+            </p>
+            <br>
+            <br>
+            <div class="col-md-3">
+                <h3>Crafting Recipe Index</h3>
+                <p>
+                    Have you ever forgotten a crafting recipe? Don't worry, you're not the only one. Now you can find all the crafting recipes for all items and blocks across all platforms as of their current versions and any previous versions if applicable! You'll never need to spend countless hours scouring the web for the recipe ever again!
+                </p>
+            </div>
+            <div class="col-md-3">
+                <h3>Potion Brewing Recipe Index</h3>
+                <p>
+                    Have you ever forgotten how to brew a potion? Don't worry, you're not the only one who's forgotten. Brewing isn't the easiest thing to remember how to do. But now with the Potion Brewing Recipe Index, it's easy! You'll never forget how to brew a potion again!
+                </p>
+            </div>
+            <div class="col-md-3">
+                <h3>Command Documentation</h3>
+                <p>
+                    Being able to use commands to manipulate Minecraft and how mechanics behaves is a really cool feature. However, sometimes the in-game usage errors aren't the easiest to understand and the game doesn't tell you what the commands do. With the Command Documentation, that is no longer an issue! Reference and read up on all the commands across all Minecraft editions that support it and manipulate Minecraft like a pro!
+                </p>
+            </div>
+            <div class="col-md-3">
+                <h3>Nether Portal Calculator</h3>
+                <p>
+                    On servers where there is a lot of players playing at once, you'll inevitably run into a problem where your overworld nether portal links with someone else's portal. Quite the conundrum, right? Now you don't have to worry about all of that! Here you can use a specialized tool for calculating where in the nether your nether portal should be located! Try it out and you'll never have linking issues again!
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <paper-card header="Crafting Recipe Index" image="https://images-na.ssl-images-amazon.com/images/I/41Xkzz3PsDL.png" alt="">
+                    <div class="card-content">
+                        The Crafting Recipe Index. Never forget another recipe again!
+                    </div>
+                    <div class="card-actions">
+                        <a href="recipes.html">
+                            <paper-button>
+                                Go To Crafting Index
+                            </paper-button>
+                        </a>
+                    </div>
+                </paper-card>
+            </div>
+            <div class="col-md-3">
+                <paper-card header="Crafting Recipe Index" image="https://vignette.wikia.nocookie.net/minecraft360/images/8/87/Potion_blue-1-.png/revision/latest?cb=20140717103525" alt="">
+                    <div class="card-content">
+                        The Poition Brewing Recipe Index. Never forget another potion recipe again!
+                    </div>
+                    <div class="card-actions">
+                        <a href="potions.html">
+                            <paper-button>
+                                Go To Brewing Index
+                            </paper-button>
+                        </a>
+                    </div>
+                </paper-card>
+            </div>
+            <div class="col-md-3">
+                <paper-card header="Crafting Recipe Index" image="cmd_block.png" alt="">
+                    <div class="card-content">
+                        The Command Documentation. Become a command pro in no time!
+                    </div>
+                    <div class="card-actions">
+                        <a href="commands.html">
+                            <paper-button>
+                                Go To Command Docs
+                            </paper-button>
+                        </a>
+                    </div>
+                </paper-card>
+            </div>
+            <div class="col-md-3">
+                <paper-card header="Crafting Recipe Index" image="https://lh3.ggpht.com/hCfLg9Y1AKxUPQWeRQx6OO721CENSkYaoNpkAwhuXR1X4ORDryT7EWv4oNLiJJ4-ecoG" alt="">
+                    <div class="card-content">
+                        The Nether Portal Calculator. Never having linking problems ever again!
+                    </div>
+                    <div class="card-actions">
+                        <a href="calculator.html">
+                            <paper-button>
+                                Go To Calculator
+                            </paper-button>
+                        </a>
+                    </div>
+                </paper-card>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="bower_components/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  </body>
+</html>

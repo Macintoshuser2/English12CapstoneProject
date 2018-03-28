@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Minecraft Crafting, Brewing and Command Index</title>
+    <style>
+        @font-face {
+            font-family: minecraft;
+            src: url(1_Minecraft-Regular.ttf);
+        }
+
+        body {
+            margin-bottom: 15px;
+        }
+
+        * {
+            outline: none;
+        }
+
+        .nav.nav-tabs {
+            background-color: green;
+        }
+
+        .nav.nav-tabs a {
+            color: white;
+        }
+        .tab-pane {
+            margin: 15px 15px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        code {
+            font-family: minecraft, fantasy;
+            color: white;
+            background-color: black;
+            padding: 3px;
+            border: 2px solid darkblue;
+            border-radius: 5px;
+        }
+
+        .examples {
+            text-align: left;
+        }
+
+        td {
+            border: 1px solid;
+            padding: 2px;
+        }
+
+        .cmd-name, .args {
+            width: 15%;
+        }
+
+        .func {
+            width: 35%;
+        }
+    </style>
+  </head>
+  <body>
+    <span class="sr-only"><a class="sr-only" href="#calculator-container">Skip to main content</a></span>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">
+            <!-- Supply a label for the link for screen readers -->
+            <span class="sr-only">Go Home</span>
+            <img src="grassblock.png" width="32" height="32" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="recipes.html">Crafting Recipe Index</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="potions.html">Potion Brewing Recipe Index</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="commands.html">Commands Documentation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="calculator.html">Nether Portal Calculator</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <ul class="nav nav-tabs" id="mc-edition-tabs" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="java-tab" data-toggle="tab" href="#java" role="tab" aria-controls="java" aria-selected="true">Java Edition</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="bedrock-tab" data-toggle="tab" href="#bedrock" role="tab" aria-controls="bedrock" aria-selected="false">Bedrock Edition</a>
+        </li>
+    </ul>
+
+    <div class="tab-content" id="mc-editions-tab-content">
+        <div class="tab-pane fade show active" id="java" role="tabpanel" aria-labelledby="java-tab">
+            <div class="container-fluid text-center">
+                <table class="table table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th colspan="4">
+                                <h4>Minecraft: Java Edition Commands (1.12.2)</h4>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th class="cmd-name">
+                                Command Name
+                            </th>
+                            <th class="args">
+                                Arguments (required and optional)
+                            </th>
+                            <th class="func">
+                                Function
+                            </th>
+                            <th>
+                                Example(s)
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/advancement</code>
+                            </td>
+                            <td class="args">
+                                <code>grant</code>
+                                <br>
+                                <br>
+                                <code>revoke</code>
+                                <br>
+                                <br>
+                                <code>test</code>
+                                <br>
+                                <br>
+                                <code>player_name</code>
+                                <br>
+                                <br>
+                                <code>advancement_name</code>
+                                <br>
+                                <br>
+                                <code>everything</code>
+                                <br>
+                                <br>
+                                <code>from</code>
+                                <br>
+                                <br>
+                                <code>only</code>
+                                <br>
+                                <br>
+                                <code>through</code>
+                                <br>
+                                <br>
+                                <code>until</code>
+                            </td>
+                            <td class="func">
+                                <p class="function">
+                                    This command is used for granting or revoking an advancement from a defined player, as well as testing to see if a defined player has a certain advancement or not.
+                                </p>
+                            </td>
+                            <td class="examples">
+                                <code>/advancement grant Notch everything</code>
+                                <br>
+                                <br>
+                                <code>/advancement revoke Notch everything</code>
+                                <br>
+                                <br>
+                                <code>/advancement test Notch minecraft:story/root</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/blockdata</code>
+                            </td>
+                            <td class="args">
+                                <code>x</code>
+                                <br>
+                                <br>
+                                <code>y</code>
+                                <br>
+                                <br>
+                                <code>z</code>
+                                <br>
+                                <br>
+                                <code>data_tag</code>
+                            </td>
+                            <td class="func">
+                                <p class="function">
+                                    This command replaces a block's current NBT data with the provided NBT data in the <code>data_tag</code> argument
+                                </p>
+                            </td>
+                            <td class="examples">
+                                <code>/blockdata -257 69 258 {Primary:3}</code>
+                                <br>
+                                (Changes the effect given off by the beacon that is located at the given x, y, and z coordinates to Haste)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/clear</code>
+                            </td>
+                            <td class="args">
+                                <code>player_name</code>
+                                <br>
+                                <br>
+                                <code>item</code>
+                                <br>
+                                <br>
+                                <code>data</code>
+                                <br>
+                                <br>
+                                <code>max_count</code>
+                                <br>
+                                <br>
+                                <code>data_tag</code>
+                                <br>
+                                <br>
+                                NOTE: All arguments are optional!
+                            </td>
+                            <td class="func">
+                                <p class="function">
+                                    This command will clear your inventory or a specific player's inventory, as well as take away specific items or blocks with specific quantities if desired.
+                                </p>
+                            </td>
+                            <td class="examples">
+                                <code>/clear Macintoshuser_2 minecraft:chest 0 32</code>
+                                <br>
+                                <br>
+                                NOTE: 
+                                <br>
+                                To remove a specific number of items, provide a value of zero for meta data if the item doesn't have metadata like stone, wool, etc.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/clone</code>
+                            </td>
+                            <td class="args">
+                                <code>x1</code>
+                                <br>
+                                <br>
+                                <code>y1</code>
+                                <br>
+                                <br>
+                                <code>z1</code>
+                                <br>
+                                <br>
+                                <code>x2</code>
+                                <br>
+                                <br>
+                                <code>y2</code>
+                                <br>
+                                <br>
+                                <code>z2</code>
+                                <br>
+                                <br>
+                                <code>x</code>
+                                <br>
+                                <br>
+                                <code>y</code>
+                                <br>
+                                <br>
+                                <code>z</code>
+                                <br>
+                                <br>
+                                The first set of x, y, and z coordinates is the location of the highest block, the second set of x, y, and z coordinates is the location of the lowest block of a selection, being opposite of each other.
+                                <br>
+                                The third set of coordinates is the location in which you want the selection copied to.
+                            </td>
+                            <td class="func">
+                                <p class="function">
+                                    This command is used for cloning a selection of blocks and placing it at a different location relative to the Northwest corner.
+                                </p>
+                            </td>
+                            <td class="examples">
+                                <code>/clone 229 64 335 205 75 358 ~30 ~ ~30</code>
+                                <br>
+                                <br>
+                                <code>/clone 299 74 238 288 88 224 ~30 ~ ~30 replace move</code>
+                                <br>
+                                <br>
+                                <code>/clone 229 64 335 205 75 358 ~30 ~ ~30 filtered normal bedrock</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/debug</code>
+                            </td>
+                            <td class="args">
+                                <code>start</code>
+                                <br>
+                                <br>
+                                <code>stop</code>
+                            </td>
+                            <td class="func">
+                                <p class="function">
+                                    This command is used to start or stop debug profiling
+                                </p>
+                            </td>
+                            <td class="examples">
+                                <code>/debug start</code>
+                                <br>
+                                <br>
+                                <code>/debut stop</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/defaultgamemode</code>
+                            </td>
+                            <td class="args">
+                                <code>mode</code>
+                            </td>
+                            <td class="func">
+                                <p class="function">
+                                    This command is used to set the default game mode of the world to either survival mode, creative mode, adventure mode, or spectator mode.
+                                </p>
+                            </td>
+                            <td class="examples">
+                                <code>/defaultgamemode survival</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/difficulty</code>
+                            </td>
+                            <td class="args">
+                                <code>new_difficulty</code>
+                            </td>
+                            <td class="func">
+                                <p class="function">
+                                    This command is used to set the world's difficulty level.
+                                </p>
+                            </td>
+                            <td class="examples">
+                                <code>/difficulty peaceful</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/effect</code>
+                            </td>
+                            <td class="args">
+                                <code>player</code>
+                                <br>
+                                <br>
+                                <code>effect</code>
+                                <br>
+                                <br>
+                                <code>seconds</code>
+                                <br>
+                                <br>
+                                <code>amplifier</code>
+                                <br>
+                                <br>
+                                <code>hide_particles</code>
+                                <br>
+                                <br>
+                                <code>clear</code>
+                            </td>
+                            <td class="func">
+                                <p class="function">
+                                    Gives a player a specific effect
+                                </p>
+                            </td>
+                            <td class="examples">
+                                <code>/effect Notch minecraft:night_vision 120 2 true</code>
+                                <br>
+                                <br>
+                                <code>/effect Notch clear</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/enchant</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/entitydata</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/execute</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/fill</code>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/enchant</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/entitydata</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/execute</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/fill</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/function</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/gamemode</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/gamerule</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/give</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/help</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/kill</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/locate</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/me</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/particle</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/playsound</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/publish</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/recipe</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/reload</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/replaceitem</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/say</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/scoreboard</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/seed</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/setblock</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/setworldspawn</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/spawnpoint</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/spreadplayers</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/stats</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/stopsound</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/summon</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/teleport</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/tell</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/tellraw</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/testfor</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/testforblock</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/testforblocks</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/time/code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/title</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/toggledownfall</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/tp</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/trigger</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/weather</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/worldborder</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cmd-name">
+                                <code>/xp</code>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="bedrock" role="tabpanel" aria-labelledby="bedrock-tab"></div>
+    </div> 
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="bower_components/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  </body>
+</html>

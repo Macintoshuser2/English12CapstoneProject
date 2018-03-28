@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Nether Portal Calculator</title>
+    </head>
+    <style>
+        @font-face {
+            font-family: minecraft;
+            src: url(1_Minecraft-Regular.ttf);
+        }
+
+        input {
+            border: 3px solid rgb(139, 139, 139);
+            background-color: black;
+            color: white;
+            padding: 3px;
+            outline: none;
+            width: 100%;
+        }
+
+        #overworld-x, #overworld-y, #overworld-z, #nether-x, #nether-y, #nether-z {
+            font-family: minecraft, fantasy;
+        }
+
+        input[type="button"] {
+            font-family: minecraft, fantasy;
+            border: 5px outset gray;
+            background-color: darkslategray;
+            text-shadow: 5px 5px 10px black;
+            width: 100%;
+            box-shadow: 3px 3px 5px black;
+        }
+
+        label {
+            color: white;
+            font-family: minecraft, fantasy;
+            flex: 1;
+        }
+
+        body {
+            background-image: url(dirt.png);
+        }
+
+        .grid {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .col {
+            flex: 1;
+            text-align: center;
+        }
+
+        @media (max-width: 870px) {
+            .grid {
+                display: block;
+            }
+        }
+
+        #error-or-success {
+            flex: 1;
+            width: 100%;
+        }
+    </style>
+    <body>
+        <span class="sr-only"><a class="sr-only" href="#calculator-container">Skip to main content</a></span>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">
+                <!-- Supply a label for the link for screen readers -->
+                <span class="sr-only">Go Home</span>
+                <img src="grassblock.png" width="32" height="32" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="recipes.html">Crafting Recipe Index</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="potions.html">Potion Brewing Recipe Index</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="commands.html">Commands Documentation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="calculator.html">Nether Portal Calculator</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <br>
+        <div class="container-fluid">
+            <div id="calculator-container">
+                <div class="grid">
+                    <div class="col">
+                        <label for="overworld-x" id="overworld-x-label">Overworld X:</label>
+                        <br>
+                        <input type="text" id="overworld-x" name="overworld-x">
+                        <paper-tooltip for="overworld-x">The X coordinate of your nether portal in the overworld</paper-tooltip>
+                    </div>
+                    <div class="col">
+                        <label for="overworld-y" id="overworld-y-label">Overworld Y:</label>
+                        <br>
+                        <input type="text" id="overworld-y" name="overworld-y">
+                        <paper-tooltip for="overworld-y">The Y coordinate of your nether portal in the overworld</paper-tooltip>
+                    </div>
+                    <div class="col">
+                        <label for="overworld-z" id="overworld-z-label">Overworld Z:</label>
+                        <br>
+                        <input type="text" id="overworld-z" name="overworld-z">
+                        <paper-tooltip for="overworld-z">The Z coordinate of your nether portal in the overworld</paper-tooltip>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="grid">
+                    <div class="col">
+                        <label for="nether-x" id="nether-x-label">Nether X:</label>
+                        <br>
+                        <input type="text" id="nether-x" name="nether-x">
+                        <paper-tooltip for="nether-x">The X coordinate of your nether portal in the nether</paper-tooltip>
+                    </div>
+                    <div class="col">
+                        <label for="nether-y" id="nether-y-label">Nether Y:</label>
+                        <br>
+                        <input type="text" id="nether-y" name="nether-y">
+                        <paper-tooltip for="nether-y">The Y coordinate of your nether portal in the nether</paper-tooltip>
+                    </div>
+                    <div class="col">
+                        <label for="nether-z" id="nether-z-label">Nether Z:</label>
+                        <br>
+                        <input type="text" id="nether-z" name="nether-z">
+                        <paper-tooltip for="nether-z">The Z coordinate of your nether portal in the nether</paper-tooltip>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="grid">
+                    <div class="col">
+                        <input type="button" name="overworld-to-nether" id="overworld-to-nether" value="Calculate Nether Coordinates">
+                        <paper-toast id="coords-error" text="Coordinates could not be converted! You must enter an x, y, and z coordinate in order to calculate coordinates!" duration="0">
+                            <paper-button onclick="document.getElementById('coords-error').toggle();">
+                                Dismiss
+                            </paper-button>
+                        </paper-toast>
+                    </div>
+                    <br>
+                    <div class="col">
+                        <input type="button" name="reset" id="reset" value="Reset Coordinate Values">
+                        <paper-toast id="coords-reset" text="Values reset!" duration="0">
+                            <paper-button onclick="document.getElementById('coords-reset').toggle();">
+                                Dismiss
+                            </paper-button>
+                        </paper-toast>
+                    </div>
+                    <br>
+                    <div class="col">
+                        <input type="button" name="nether-to-overworld" id="nether-to-overworld" value="Calculate Overworld Coordinates">
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="calculator.js" type="text/javascript"></script>
+        <link rel="import" href="bower_components/paper-tooltip/paper-tooltip.html">
+        <link rel="import" href="bower_components/paper-toast/paper-toast.html">
+        <link rel="import" href="bower_components/paper-button/paper-button.html">
+    </body>
+</html>
