@@ -1081,7 +1081,70 @@
                                 <code>/clone</code>
                             </td>
                             <td class="args">
-
+                                <code>begin</code> (x, y, and z)
+                                <br>
+                                <br>
+                                <code>end</code> (x, y, and z)
+                                <br>
+                                <br>
+                                <code>destination</code> (x, y, and z)
+                                <br>
+                                <br>
+                                <code>replace</code>
+                                <br>
+                                <br>
+                                <code>masked</code>
+                                <br>
+                                <br>
+                                <code>normal</code>
+                                <br>
+                                <br>
+                                <code>force</code>
+                                <br>
+                                <br>
+                                <code>move</code>
+                                <br>
+                                <br>
+                                <code>filtered</code>
+                                <br>
+                                <br>
+                                <code>tile_name</code>
+                                <br>
+                                <br>
+                                <code>tile_data</code>
+                                <br>
+                                <br>
+                                The <code>begin</code> argument is the starting x, y, and z coordinates for the region of blocks to clone.
+                                <br>
+                                <br>
+                                The <code>end</code> argument is the ending x, y, and z coordinates for the block on the opposite corner of the region to clone.
+                                <br>
+                                <br>
+                                The <code>destination</code> argument is the x, y, and z coordinates for the destination region. This MUST be the bottom northwest corner of the region in order for it to work how it is intended.
+                                <br>
+                                <br>
+                                The <code>replace</code> argument is optional. This argument allows for cloning all blocks in the region, including air blocks. NOTE: This is the default behavior if you don't specify any optional arguments.
+                                <br>
+                                <br>
+                                The <code>masked</code> argument is optional. This argument will allow for only cloning blocks that aren't air blocks.
+                                <br>
+                                <br>
+                                The <code>normal</code> argument is optional. This argument allows for cloning the blocks from the specified source region to the specified destination region. NOTE: The is also default behavior.
+                                <br>
+                                <br>
+                                The <code>force</code> argument is optional. This argument will force the region specified to clone, even if the source region and destination region overlap.
+                                <br>
+                                <br>
+                                The <code>move</code> argument is optional. This argument, when <code>filtered</code> is not applied, will move the blocks in the specified source region to the specified destination region. With filtered applied, blocks that were not cloned will remain the same.
+                                <br>
+                                <br>
+                                The <code>filtered</code> argument is optional. This argument will only clone blocks that match the specified <code>tile_name</code> argument.
+                                <br>
+                                <br>
+                                The <code>tile_name</code> argument is optional. This argument represent the specific block you want to clone.
+                                <br>
+                                <br>
+                                The <code>tile_data</code> argument is optional. This argument represents the meta data of the specified <code>tile_name</code> argument.
                             </td>
                             <td class="func">
 
