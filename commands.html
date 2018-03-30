@@ -857,7 +857,7 @@
                         </tr>
                         <tr>
                             <td class="cmd-name">
-                                <code>/time/code>
+                                <code>/time</code>
                             </td>
                             <td class="args">
 
@@ -1112,45 +1112,14 @@
                                 <br>
                                 <br>
                                 <code>tile_data</code>
-                                <br>
-                                <br>
-                                The <code>begin</code> argument is the starting x, y, and z coordinates for the region of blocks to clone.
-                                <br>
-                                <br>
-                                The <code>end</code> argument is the ending x, y, and z coordinates for the block on the opposite corner of the region to clone.
-                                <br>
-                                <br>
-                                The <code>destination</code> argument is the x, y, and z coordinates for the destination region. This MUST be the bottom northwest corner of the region in order for it to work how it is intended.
-                                <br>
-                                <br>
-                                The <code>replace</code> argument is optional. This argument allows for cloning all blocks in the region, including air blocks. NOTE: This is the default behavior if you don't specify any optional arguments.
-                                <br>
-                                <br>
-                                The <code>masked</code> argument is optional. This argument will allow for only cloning blocks that aren't air blocks.
-                                <br>
-                                <br>
-                                The <code>normal</code> argument is optional. This argument allows for cloning the blocks from the specified source region to the specified destination region. NOTE: The is also default behavior.
-                                <br>
-                                <br>
-                                The <code>force</code> argument is optional. This argument will force the region specified to clone, even if the source region and destination region overlap.
-                                <br>
-                                <br>
-                                The <code>move</code> argument is optional. This argument, when <code>filtered</code> is not applied, will move the blocks in the specified source region to the specified destination region. With filtered applied, blocks that were not cloned will remain the same.
-                                <br>
-                                <br>
-                                The <code>filtered</code> argument is optional. This argument will only clone blocks that match the specified <code>tile_name</code> argument.
-                                <br>
-                                <br>
-                                The <code>tile_name</code> argument is optional. This argument represent the specific block you want to clone.
-                                <br>
-                                <br>
-                                The <code>tile_data</code> argument is optional. This argument represents the meta data of the specified <code>tile_name</code> argument.
                             </td>
                             <td class="func">
-
+                                <p class="function">
+                                    This command allows the player to 
+                                </p>
                             </td>
                             <td class="examples">
-                                
+                                <code>/clone ~ ~-3 ~ ~5 ~5 ~5 ~10 ~10 ~10 filtered normal bedrock</code>
                             </td>
                         </tr>
                         <tr>
@@ -1158,13 +1127,17 @@
                                 <code>/connect</code>
                             </td>
                             <td class="args">
-
+                                <code>server_URI</code>
                             </td>
                             <td class="func">
-
+                                <p class="function">
+                                    This command allows to connect to a websocket server at the specified URL or URI. 
+                                    <br>
+                                    NOTE: This command only works on Mobile devices, such as iOS and Android, and on Windows 10. It will not work on the console version of Bedrock Edition.
+                                </p>
                             </td>
                             <td class="examples">
-                                
+                                <code>/connect 198.162.0.10:19132</code>
                             </td>
                         </tr>
                         <tr>
@@ -1172,13 +1145,21 @@
                                 <code>/daylock</code>
                             </td>
                             <td class="args">
-
+                                <code>true</code>
+                                <br>
+                                <br>
+                                <code>false</code>
                             </td>
                             <td class="func">
-
+                                <p class="function">
+                                    This command allows for locking and unlocking the day-night cycle at the current moment.
+                                </p>
                             </td>
                             <td class="examples">
-                                
+                                <code>/daylock true</code>
+                                <br>
+                                <br>
+                                <code>/daylock false</code>
                             </td>
                         </tr>
                         <tr>
@@ -1200,13 +1181,15 @@
                                 <code>/difficulty</code>
                             </td>
                             <td class="args">
-
+                                <code>player_name</code>
                             </td>
                             <td class="func">
-
+                                <p class="function">
+                                    This command revokes multiplayer world operator privilages from the specified player.
+                                </p>
                             </td>
                             <td class="examples">
-                                
+                                <code>/deop Notch</code>
                             </td>
                         </tr>
                         <tr>
@@ -1214,13 +1197,33 @@
                                 <code>/effect</code>
                             </td>
                             <td class="args">
-
+                                <code>player</code>
+                                <br>
+                                <br>
+                                <code>effect</code>
+                                <br>
+                                <br>
+                                <code>seconds</code>
+                                <br>
+                                <br>
+                                <code>amplifier</code>
+                                <br>
+                                <br>
+                                <code>hide_particles</code>
+                                <br>
+                                <br>
+                                <code>clear</code>
                             </td>
                             <td class="func">
-
+                                <p class="function">
+                                    Gives a player a specific effect
+                                </p>
                             </td>
                             <td class="examples">
-                                
+                                <code>/effect Notch minecraft:night_vision 120 2 true</code>
+                                <br>
+                                <br>
+                                <code>/effect Notch clear</code>
                             </td>
                         </tr>
                         <tr>
