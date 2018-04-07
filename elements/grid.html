@@ -1,0 +1,21 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="crafting-grid">
+  <template>
+    <style>
+        :host {
+            display: grid;
+            grid-template-columns: 36px 36px 36px;
+            grid-template-rows: 36px 36px 36px;
+            background-image: url(../crafting_grid.png);
+            width: 108px;
+            height: 108px;
+        }
+    </style>
+    <slot></slot>
+  </template>
+
+  <script>
+    Polymer({ is: 'crafting-grid' });
+  </script>
+</dom-module>
