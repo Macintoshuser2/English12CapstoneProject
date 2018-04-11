@@ -1,21 +1,35 @@
-<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
 
 <dom-module id="crafting-grid">
   <template>
     <style>
         :host {
             display: grid;
-            grid-template-columns: 36px 36px 36px;
-            grid-template-rows: 36px 36px 36px;
+            grid-template-columns: 40px 40px 40px;
+            grid-template-rows: 40px 40px 40px;
             background-image: url(../crafting_grid.png);
-            width: 108px;
-            height: 108px;
+            width: 120px;
+            height: 120px;
+            background-size: 120px;
         }
     </style>
     <slot></slot>
   </template>
-
   <script>
-    Polymer({ is: 'crafting-grid' });
+    // Polymer({ is: 'crafting-grid' });
+    class CraftingGrid extends Polymer.Element 
+    {
+      constructor() 
+      {
+        super();
+      }
+
+      static get is() 
+      {
+        return 'crafting-grid';
+      }
+    }
+
+    window.customElements.define(CraftingGrid.is, CraftingGrid);
   </script>
 </dom-module>

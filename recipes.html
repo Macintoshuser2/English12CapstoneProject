@@ -5,6 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Minecraft Crafting Recipe Index</title>
+    <style>
+        .item-recipe {
+            width: 70%;
+            margin: 25px auto;
+            text-align: center;
+            border: 2px solid gray;
+            background-color: lightgray;
+            box-shadow: 1px 1px 3px gray;
+            border-radius: 5px;
+        }
+
+        .desc {
+            font-size: 20px;
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        .grid {
+            width: 120px;
+            margin: 0 auto;
+        }
+    </style>
   </head>
   <body>
     <span class="sr-only"><a class="sr-only" href="#content">Skip to main content</a></span>
@@ -35,7 +57,33 @@
         </div>
     </nav>
     <br>
-    <crafting-grid></crafting-grid>
+    <br>
+    <div class="item-recipe">
+        <h3>Golden Apple</h3>
+        <div class="grid">
+            <crafting-grid>
+                <!--
+                    Looks like this:
+
+                    G  G  G
+                    G  A  G
+                    G  G  G
+                -->
+                <div><img src="gold_ingot.png" alt="" width="36" height="36"></div>
+                <div><img src="gold_ingot.png" alt="" width="36" height="36"></div>
+                <div><img src="gold_ingot.png" alt="" width="36" height="36"></div>
+                <div><img src="gold_ingot.png" alt="" width="36" height="36"></div>
+                <div><img src="apple.png" alt="" width="36" height="36"></div>
+                <div><img src="gold_ingot.png" alt="" width="36" height="36"></div>
+                <div><img src="gold_ingot.png" alt="" width="36" height="36"></div>
+                <div><img src="gold_ingot.png" alt="" width="36" height="36"></div>
+                <div><img src="gold_ingot.png" alt="" width="36" height="36"></div>
+            </crafting-grid>
+        </div>
+        <p class="desc">
+            A golden apple is used for a couple things. Most notably it is used to turn zombie villagers back into villagers when given to it after a potion of weakness. The recipe is as follows: 
+        </p>
+    </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
