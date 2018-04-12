@@ -12,7 +12,7 @@
             text-align: center;
             border: 2px solid gray;
             background-color: lightgray;
-            box-shadow: 1px 1px 3px gray;
+            box-shadow: 1px 1px 3px gray inset;
             border-radius: 5px;
         }
 
@@ -25,6 +25,10 @@
         .grid {
             width: 120px;
             margin: 0 auto;
+        }
+
+        .grid div img {
+            margin-top: 1px;
         }
     </style>
   </head>
@@ -62,26 +66,79 @@
         <h3>Golden Apple</h3>
         <div class="grid">
             <crafting-grid>
-                <!--
-                    Looks like this:
-
-                    G  G  G
-                    G  A  G
-                    G  G  G
-                -->
-                <div><img src="gold_ingot.png" alt="" width="36" height="36"></div>
-                <div><img src="gold_ingot.png" alt="" width="36" height="36"></div>
-                <div><img src="gold_ingot.png" alt="" width="36" height="36"></div>
-                <div><img src="gold_ingot.png" alt="" width="36" height="36"></div>
-                <div><img src="apple.png" alt="" width="36" height="36"></div>
-                <div><img src="gold_ingot.png" alt="" width="36" height="36"></div>
-                <div><img src="gold_ingot.png" alt="" width="36" height="36"></div>
-                <div><img src="gold_ingot.png" alt="" width="36" height="36"></div>
-                <div><img src="gold_ingot.png" alt="" width="36" height="36"></div>
+                <div><img src="textures/gold_ingot.png" alt="" width="36" height="36"></div>
+                <div><img src="textures/gold_ingot.png" alt="" width="36" height="36"></div>
+                <div><img src="textures/gold_ingot.png" alt="" width="36" height="36"></div>
+                <div><img src="textures/gold_ingot.png" alt="" width="36" height="36"></div>
+                <div><img src="textures/apple.png" alt="" width="36" height="36"></div>
+                <div><img src="textures/gold_ingot.png" alt="" width="36" height="36"></div>
+                <div><img src="textures/gold_ingot.png" alt="" width="36" height="36"></div>
+                <div><img src="textures/gold_ingot.png" alt="" width="36" height="36"></div>
+                <div><img src="textures/gold_ingot.png" alt="" width="36" height="36"></div>
             </crafting-grid>
         </div>
         <p class="desc">
-            A golden apple is used for a couple things. Most notably it is used to turn zombie villagers back into villagers when given to it after a potion of weakness. The recipe is as follows: 
+            A golden apple is used for a couple things. Most notably it is used to turn zombie villagers back into villagers when given to it after a potion of weakness. The recipe contains of 8 gold ingots and 1 apple
+        </p>
+    </div>
+    <div class="item-recipe">
+        <h3>Andesite</h3>
+        <div class="grid">
+            <crafting-grid>
+                <!-- Empty div elements represent empty spaces in the crafting grid. -->
+                <div></div>
+                <div></div>
+                <div></div>
+                <div><img src="textures/stone_diorite.png" alt="" width="36" height="36"></div>
+                <div><img src="textures/cobblestone.png" alt="" width="36" height="36"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </crafting-grid>
+        </div>
+        <p class="desc">
+            Andesite is used for many different things, from building, to filling up holes. The recipe contains 1 block of andesite and one block of cobblestone. 
+        </p>
+    </div>
+    <div class="item-recipe">
+        <h3>Polished Andesite</h3>
+        <div class="grid">
+            <crafting-grid>
+                <!-- Empty div elements represent empty spaces in the crafting grid. -->
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div><img src="textures/stone_andesite.png" alt="" width="36" height="36"></div>
+                <div><img src="textures/stone_andesite.png" alt="" width="36" height="36"></div>
+                <div></div>
+                <div><img src="textures/stone_andesite.png" alt="" width="36" height="36"></div>
+                <div><img src="textures/stone_andesite.png" alt="" width="36" height="36"></div>
+            </crafting-grid>
+        </div>
+        <p class="desc">
+            Polished Andesite is used for many different things, from building, to filling up holes. The recipe contains 4 blocks of andesite. 
+        </p>
+    </div>
+    <div class="item-recipe">
+        <h3>Anvil</h3>
+        <div class="grid">
+            <crafting-grid>
+                <!-- Empty div elements represent empty spaces in the crafting grid. -->
+                <div><img src="textures/iron_block.png" alt="" width="36" height="36"></div>
+                <div><img src="textures/iron_block.png" alt="" width="36" height="36"></div>
+                <div><img src="textures/iron_block.png" alt="" width="36" height="36"></div>
+                <div></div>
+                <div><img src="textures/iron_ingot.png" alt="" width="36" height="36"></div>
+                <div></div>
+                <div><img src="textures/iron_ingot.png" alt="" width="36" height="36"></div>
+                <div><img src="textures/iron_ingot.png" alt="" width="36" height="36"></div>
+                <div><img src="textures/iron_ingot.png" alt="" width="36" height="36"></div>
+            </crafting-grid>
+        </div>
+        <p class="desc">
+            Anvils are used for repairing tools, armor, elytras, and renaming items and blocks. The recipe consists of 3 iron blocks and 4 ingots, which makes a grand total of 31 ingots per anvil. 
         </p>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
