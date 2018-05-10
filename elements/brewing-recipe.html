@@ -1,0 +1,40 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="brewing-recipe">
+    <template>
+        <style>
+            :host {
+                height: 120px;
+                width: 500px;
+            }
+
+            div > #ingredients::slotted(img), div > #add-to::slotted(img) {
+                width: 36px;
+                height: 36px;
+            }
+
+            div#arrow {
+                display: inline-block;
+            }
+
+            div#arrow::slotted(img) {
+                width: 5%;
+                height: 5%;
+            }
+
+            div#ingredient, div#add-to {
+                border: 3px inset lightgray;
+                background-color: gray;
+                display: inline-block;
+            }
+        </style>
+        <div id="ingredient"><slot id="ingredient" name="ingredient"></slot></div>
+        <div id="arrow"><slot id="arrow" name="arrow"></slot></div>
+        <div id="add-to"><slot id="add-to" name="add-to"></slot></div>
+    </template>
+    <script>
+        Polymer({
+            is: 'brewing-recipe',
+        });
+    </script>
+</dom-module>

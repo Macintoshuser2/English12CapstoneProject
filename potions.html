@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Minecraft Crafting, Brewing and Command Index</title>
+    <style>
+        #brewing-recipe, #modifiers {
+            width: 75%;
+            margin: 10px;
+            background-color: darkgray;
+            padding: 10px;
+            border: 3px outset gray;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 110%;
+        }
+
+        #modifiers {
+            width: 85%;
+        }
+
+        div#recipe-container, div#modifiers {
+            text-align: center;
+        }
+
+        h3 {
+            text-align: center;
+        }
+    </style>
+  </head>
+  <body>
+    <span class="sr-only"><a class="sr-only" href="#content">Skip to main content</a></span>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">
+            <!-- Supply a label for the link for screen readers -->
+            <span class="sr-only">Go Home</span>
+            <img src="grassblock.png" width="32" height="32" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="recipes.html">Crafting Recipe Index</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="potions.html">Potion Brewing Recipe Index</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="calculator.html">Nether Portal Calculator</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <div id="modifiers">
+        Modifiers:
+        <br>
+        <br>
+        Redstone - Extends how long the potion effect lasts
+        <br>
+        <br>
+        Glowstone - Enhances the level of the potion. (i.e. turns Strength into Strength II)
+        <br>
+        <br>
+        Fermented Spider Eye - Corrupts the Effect
+        <br>
+        <br>
+        Gunpowder - Turns a normal potion into a throwable splash potion.
+        <br>
+        <br>
+        Dragon's Breath - Turns a splah potion into a lingering potion      
+    </div>
+    <br>
+    <div id="brewing-recipe">
+        <h3>
+            Potion of Regeneration
+        </h3>
+        <div id="recipe-container">
+            <brewing-recipe>
+                <img src="textures/ghast_tear.png" slot="ingredient" width="36" height="36">
+                <img src="textures/brewing_arrow.png" slot="arrow" width="36" height="36">
+                <img src="textures/potion_awkward.png" slot="add-to" width="36" height="36">
+            </brewing-recipe>
+            <br>
+            <br>
+            <p>
+                Regeneration potions Regenerate your health for a short period of time. (Made with a ghast tear and an awkward potion)
+            </p>
+        </div>
+    </div>
+    <div id="brewing-recipe">
+        <h3>
+            Potion of Swiftness
+        </h3>
+        <div id="recipe-container">
+            <brewing-recipe>
+                <img src="textures/sugar.png" slot="ingredient" width="36" height="36">
+                <img src="textures/brewing_arrow.png" slot="arrow" width="36" height="36">
+                <img src="textures/potion_awkward.png" slot="add-to" width="36" height="36">
+            </brewing-recipe>
+            <br>
+            <br>
+            <p>
+                Swiftness potions make you walk and run faster for a short period of time. (Made with sugar and an awkward potion)
+            </p>
+        </div>
+    </div>
+    <div id="brewing-recipe">
+        <h3>
+            Fire Resistance
+        </h3>
+        <div id="recipe-container">
+            <brewing-recipe>
+                <img src="textures/magma_cream.png" slot="ingredient" width="36" height="36">
+                <img src="textures/brewing_arrow.png" slot="arrow" width="36" height="36">
+                <img src="textures/potion_awkward.png" slot="add-to" widht="36" height="36">
+            </brewing-recipe>
+            <br>
+            <br>
+            <p>
+                Fire Resistance potions make you invulnerable to fire and lava for a short period. (Made with Magma Cream and an awkward potion)
+            </p>
+        </div>
+    </div>
+    <div id="brewing-recipe">
+        <h3>
+            Potion of Healing
+        </h3>
+        <div id="recipe-container">
+            <brewing-recipe>
+                <img src="textures/melon_speckled.png" slot="ingredient" width="36" height="36">
+                <img src="textures/brewing_arrow.png" slot="arrow" width="36" height="36">
+                <img src="textures/potion_awkward.png" slot="add-to" width="36" height="36">
+            </brewing-recipe>
+            <br>
+            <br>
+            <p>
+                Instant Health potions give you an instant health boost for a short period of time. (Made with a glistering melon and an awkward potion)
+            </p>
+        </div>
+    </div>
+    <div id="brewing-recipe">
+        <h3>
+            Potion of Night Vision
+        </h3>
+        <div id="recipe-container">
+            <brewing-recipe>
+                <img src="textures/carrot_golden.png" slot="ingredient" width="36" height="36">
+                <img src="textures/brewing_arrow.png" slot="arrow" width="36" height="36">
+                <img src="textures/potion_awkward.png" slot="add-to" width="36" height="36">
+            </brewing-recipe>
+            <br>
+            <br>
+            <p>
+                Night Vision potions allow you to see clearly in the dark for a short period of time. (Made with a golden carrot and an awkward potion)
+            </p>
+        </div>
+    </div>
+    <div id="brewing-recipe">
+        <h3>
+            Potion of Strength
+        </h3>
+        <div id="recipe-container">
+            <brewing-recipe>
+                <img src="textures/blaze_powder.png" slot="ingredient" width="36" height="36">
+                <img src="textures/brewing_arrow.png" slot="arrow" width="36" height="36">
+                <img src="textures/potion_awkward.png" slot="add-to" width="36" height="36">
+            </brewing-recipe>
+            <br>
+            <br>
+            <p>
+                Strength potions increase the amount of attack damage you do for a short period of time. (Made with blaze powder and an awkward potion)
+            </p>
+        </div>
+    </div>
+    <div id="brewing-recipe">
+        <h3>
+            Potion of Leaping
+        </h3>
+        <div id="recipe-container">
+            <brewing-recipe>
+                <img src="textures/rabbit_foot.png" slot="ingredient" width="36" height="36">
+                <img src="textures/brewing_arrow.png" slot="arrow" width="36" height="36">
+                <img src="textures/potion_awkward.png" slot="add-to" width="36" height="36">
+            </brewing-recipe>
+            <br>
+            <br>
+            <p>
+                Leaping potions allow you to jump higher for a short period of time. (Made with a rabbit's foot and an awkward potion)
+            </p>
+        </div>
+    </div>
+    <div id="brewing-recipe">
+        <h3>
+            Potion of Water Breathing
+        </h3>
+        <div id="recipe-container">
+            <brewing-recipe>
+                <img src="textures/fish_pufferfish_raw.png" slot="ingredient" width="36" height="36">
+                <img src="textures/brewing_arrow.png" slot="arrow" width="36" height="36">
+                <img src="textures/potion_awkward.png" slot="add-to" width="36" height="36">
+            </brewing-recipe>
+            <br>
+            <br>
+            <p>
+                Water Breathing potions allow you to breath underwater for a short period of time. (Made with a pufferfish and an awkward potion)
+            </p>
+        </div>
+    </div>
+    <div id="brewing-recipe">
+        <h3>
+            Potion of Invisibility
+        </h3>
+        <div id="recipe-container">
+            <brewing-recipe>
+                <img src="textures/spider_eye_fermented.png" slot="ingredient" width="36" height="36">
+                <img src="textures/brewing_arrow.png" slot="arrow" width="36" height="36">
+                <img src="textures/potion_night_vision.png" slot="add-to" width="36" height="36">
+            </brewing-recipe>
+            <br>
+            <br>
+            <p>
+                Invisibility potions allow you to turn invisible for a short period of time. (Made with a fermented spider eye and potion of night vision)
+            </p>
+        </div>
+    </div>
+    <div id="brewing-recipe">
+        <h3>
+            Potion of Poison
+        </h3>
+        <div id="recipe-container">
+            <brewing-recipe>
+                <img src="textures/spider_eye.png" slot="ingredient" width="36" height="36">
+                <img src="textures/brewing_arrow.png" slot="arrow" width="36" height="36">
+                <img src="textures/potion_awkward.png" slot="add-to" width="36" height="36">
+            </brewing-recipe>
+            <br>
+            <br>
+            <p>
+                Poison potions poison you for a short period of time. (Made with a spider eye and an awkward potion)
+            </p>
+        </div>
+    </div>
+    <div id="brewing-recipe">
+        <h3>
+            Potion of Weakness
+        </h3>
+        <div id="recipe-container">
+            <brewing-recipe>
+                <img src="textures/spider_eye_fermented.png" slot="ingredient" width="36" height="36">
+                <img src="textures/brewing_arrow.png" slot="arrow" width="36" height="36">
+                <img src="textures/potion_awkward.png" slot="add-to" width="36" height="36">
+            </brewing-recipe>
+            <br>
+            <br>
+            <p>
+                Weakness potions weaken the attack damage you give for a short period of time. (Made with a fermented spider eye and a water bottle)
+            </p>
+        </div>
+    </div>
+    <div id="brewing-recipe">
+        <h3>
+            Potion of Slowness
+        </h3>
+        <div id="recipe-container">
+            <brewing-recipe>
+                <img src="textures/spider_eye_fermented.png" slot="ingredient" width="36" height="36">
+                <img src="textures/brewing_arrow.png" slot="arrow" width="36" height="36">
+                <img src="textures/potion_fire_resist.png" slot="add-to" width="36" height="36">
+            </brewing-recipe>
+            <br>
+            <br>
+            <brewing-recipe>
+                <img src="textures/spider_eye_fermented.png" slot="ingredient" width="36" height="36">
+                <img src="textures/brewing_arrow.png" slot="arrow" width="36" height="36">
+                <img src="textures/potion_swiftness.png" slot="add-to" width="36" height="36">
+            </brewing-recipe>
+            <br>
+            <br>
+            <p>
+                Slowness potions make you walk and run slower for a short period of time. (Made with a fermented spider eye and a potion of fire resistance or a potion of swiftness)
+            </p>
+        </div>
+    </div>
+    <div id="brewing-recipe">
+        <h3>
+            Potion of Harming
+        </h3>
+        <div id="recipe-container">
+            <brewing-recipe>
+                <img src="textures/spider_eye_fermented.png" slot="ingredient" width="36" height="36">
+                <img src="textures/brewing_arrow.png" slot="arrow" width="36" height="36">
+                <img src="textures/potion_healing.png" slot="add-to" width="36" height="36">
+            </brewing-recipe>
+            <br>
+            <br>
+            <brewing-recipe>
+                <img src="textures/spider_eye_fermented.png" slot="ingredient" width="36" height="36">
+                <img src="textures/brewing_arrow.png" slot="arrow" width="36" height="36">
+                <img src="textures/potion_poison.png" slot="add-to" width="36" height="36">
+            </brewing-recipe>
+            <br>
+            <br>
+            <p>
+                Harming potions instantly harm you for a short period of time. (Made with a fermented spider eye and a potion of healing or a potion of poison)
+            </p>
+        </div>
+    </div>
+    <link rel="import" href="elements/brewing-recipe.html">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="bower_components/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  </body>
+</html>
